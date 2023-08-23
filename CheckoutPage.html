@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <title>
+    BoxExpert | CheckOut
+  </title>
+
+  <!-- CSS only -->
+  <!-- Dont want delete -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+  rel="stylesheet"  type='text/css'>
+  <script src="https://kit.fontawesome.com/3a0a83657c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+
+</head>
+
+<body>
+
+<!--
+Navigation Bar
+- container-fluid = let the margin become 窄
+- want change colour jiu delete bg-light and add background-color for style
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container-fluid">
+    <a href="Home.html"><img src="img/HeaderFooter/Finalize_Logo.svg" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="ProductList.html">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="FAQ.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="TrackingPage.html">My Order</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Login.html"><i class="fa-regular fa-user"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <!--Need to press free-->
+          <a href="Shopping%20Cart.html"><i class="fa-brands fa-opencart"></i></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Content -->
+<!-- pt is change the padding like br-->
+<section id="address" class="container">
+  <h2 class="font-weight-bold pt-5"><i class="fa-regular fa-address-book"></i> Billing Address </h2>
+  <hr class="hr-line">
+
+</section>
+
+<div class="container">
+  <form novalidate>
+
+    <div class="row g-3">
+
+      <div class="col-12 pt-2">
+        <label for="companyName" class="form-label">Company Name</label>
+        <input id="companyName" type="text" class="form-control" placeholder="Company Name">
+      </div>
+
+      <div class="col-sm-6 pt-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input id="firstName" type="text" class="form-control" placeholder="John" required>
+      </div>
+
+      <div class="col-sm-6 pt-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input id="lastName" type="text" class="form-control" placeholder="Smith" required>
+      </div>
+
+      <div class="col-12 pt-3">
+        <label for="addressLine1" class="form-label">Address Line 1</label>
+        <input id="addressLine1" type="text" class="form-control" placeholder="Address line 1" required>
+      </div>
+
+      <div class="col-12 pt-3">
+        <label for="addressLine2" class="form-label">Address Line 2</label>
+        <input id="addressLine2" type="text" class="form-control" placeholder="Address line 2 (Optional)">
+      </div>
+
+      <div class="col-sm-6 pt-3">
+        <label for="city" class="form-label">City</label>
+        <input id="city" type="text" class="form-control" placeholder="Example: Alma" required>
+      </div>
+
+      <div class="col-sm-6 pt-3">
+        <label for="state" class="form-label">State</label>
+        <select id="state" type="text" class="form-control" >
+          <option value="" disabled selected>Example: Pulau Pinang</option>
+          <option value="Johor">Johor </option>
+          <option value="Kedah">Kedah</option>
+          <option value="Kelantan">Kelantan</option>
+          <option value="Malacca">Malacca</option>
+          <option value="Negeri Sembilan">Negeri Sembilan</option>
+          <option value="Pahang">Pahang</option>
+          <option value="PP">Penang</option>
+          <option value="Perak">Perak</option>
+          <option value="Perlis">Perlis</option>
+          <option value="Sabah">Sabah</option>
+          <option value="Sarawak">Sarawak</option>
+          <option value="Selangor">Selangor</option>
+          <option value="Terengganu">Terengganu</option>
+        </select>
+      </div>
+
+      <div class="col-sm-6 pt-3">
+        <label for="postalCode" class="form-label">Postal Code</label>
+        <input id="postalCode" type="text" class="form-control" placeholder="14200" required>
+      </div>
+
+      <div class="col-sm-6 pt-3">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input id="phoneNumber" type="text" class="form-control" placeholder="+601122334455" required>
+      </div>
+
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="form-check">
+        <input id="sameAddress" type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="sameAddress">Is Shipping Address same as Billing Address? </label>
+      </div>
+
+    <hr>
+
+  </form>
+</div>
+
+<br>
+
+<div class="container">
+  <form novalidate>
+<hr>
+    <div class="form-check form-check-inline col-sm-6">
+        <input onclick="EnableDisabled()" id="creditCard" name="paymentMethod" type="radio" class="form-check-input" style="height:17px; width:17px; vertical-align: middle;" checked>
+        <label class="form-check-label" for="creditCard" style="font-size: 17px;">Debit/Credit Card</label> &nbsp;&nbsp;
+        <i class="fa-regular fa-credit-card fa-lg"></i>
+      </div>
+
+          <div class="form-check form-check-inline">
+        <input onclick="EnableDisabled()" id="cod" name="paymentMethod" type="radio" class="form-check-input" style="height:17px; width:17px; vertical-align: middle;">
+        <label class="form-check-label" for="cod" style="font-size: 17px;">Cash On Delivery</label> &nbsp;&nbsp;
+        <i class="fa-solid fa-money-bill fa-lg"></i>
+      </div>
+    <hr>
+  </form>
+</div>
+
+<section id="Checkout" class="container">
+  <h2 class="font-weight-bold pt-3"><i class="fa-solid fa-credit-card"></i> Card Information </h2>
+  <hr class="hr-line">
+
+</section>
+
+<div class="container">
+  <form novalidate>
+
+    <!--
+      <div class="form-check form-check-inline col-sm-6">
+        <input id="creditCard" name="paymentMethod" type="radio" class="form-check-input">
+        <label class="form-check-label" for="creditCard">Debit/Credit Card</label> &nbsp;&nbsp;
+        <i class="fa-regular fa-credit-card"></i>
+      </div>
+
+
+      <div class="form-check form-check-inline">
+        <input id="cod" name="paymentMethod" type="radio" class="form-check-input">
+        <label class="form-check-label" for="cod">Cash On Delivery</label> &nbsp;&nbsp;
+        <i class="fa-solid fa-money-bill"></i>
+      </div>
+      -->
+
+    <div class="row g-3">
+
+      <!--disabled is used for disable textbox-->
+      <div class="col-12 pt-3">
+        <label for="nameOfCard" class="form-label">Name of Card</label>
+        <input id="nameOfCard" type="text" class="form-control">
+        <small class="text-muted">Full name as displayed on card.</small>
+      </div>
+
+      <div class="col-12 pt-3">
+          <label for="cardNo" class="form-label">Card Number</label>
+          <input id="cardNo" type="text" class="form-control">
+          <small class="text-muted">Mastercard, Visa and AMEX is accepted.</small>
+      </div>
+
+      <div class="col-sm-3 pt-3">
+          <label for="expire" class="form-label">Expiry Date</label>
+          <input id="expire" type="text" class="form-control" placeholder="MM / YY">
+      </div>
+
+      <div class="col-sm-3 pt-3">
+          <label for="CVV" class="form-label">CVV</label>
+          <input id="CVV" type="text" class="form-control">
+          <small class="text-muted">CVV number (Card Verification Value) is the 3-digital number next to the signature area at the back of the card.</small>
+      </div>
+
+      <div class="col-sm-6 pt-3">
+        <img src="img/HeaderFooter/Payment_Method.png" alt="payment_method" width="540px">
+      </div>
+
+    </div>
+
+  </form>
+  <br>
+    <hr>
+  <div class="row">
+  <button class="col-md-4 pt-3" onclick="location.href='Shopping Cart.html'">Back to Shopping Cart</button>
+
+      <button class="col-md-4 offset-md-4" onclick="location.href='TrackingPage.html'">Continue to checkout</button>
+    </div>
+</div>
+
+<!--Footer-->
+
+<footer class="mt-5 py-5">
+  <div class="row container mx-auto pt-5">
+    <div class="footer-one col-lg-3 col-md-6 col-12">
+    <img src="img/HeaderFooter/Finalize_Logo.svg" alt="logo">
+      <p class="pt-3"> This website is used to design about box packaging</p>
+    </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Page</h5>
+    <ul class="text-uppercase list-unstyled">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="ProductList.html">Products</a></li>
+      <li><a href="FAQ.html">About Us</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Contact Us</h5>
+    <div>
+      <h6 class="text-uppercase">Address</h6>
+      <a href="https://www.google.com/maps/place/Penang/@5.3539819,100.198192,11z/data=!3m1!4b1!4m5!3m4!1s0x304a9403095390dd:0x29c305a5f38f633f!8m2!3d5.4163935!4d100.3326786" target="_blank"><p>Pulau Pinang, Malaysia</p></a>
+    </div>
+    <div>
+      <h6 class="text-uppercase">Phone</h6>
+      <a href="tel:+60312001200"><p>03 - 1200 1200</p></a>
+    </div>
+    <div>
+      <h6 class="text-uppercase">E-mail</h6>
+      <a href="mailto:sales@boxexpert.com>"><p>sales@boxexpert.com</p></a>
+    </div>
+  </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Instagram</h5>
+    <div class="row">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod1.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod2.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod3.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod4.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod5.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod6.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod7.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod8.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod9.png" alt="instaphoto">
+    </div>
+  </div>
+</div>
+
+<div class="copyright mt-5">
+    <div class="row container mx-auto">
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <img src="img/HeaderFooter/Payment_Method.png" alt="Payment" width="200px">
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-12 text-nowrap">
+        <p>Box Expert Sdn Bhd © 2022. All Rights Reserved </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-12">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<!--JavaScript-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="JavaScript/RadioButton.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+</body>
+</html>

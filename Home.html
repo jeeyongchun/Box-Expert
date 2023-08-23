@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        BoxExpert | Homepage
+    </title>
+
+    <!-- CSS only -->
+    <!-- Dont want delete -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+          rel="stylesheet" type='text/css'>
+
+    <!--CSS File-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!--JavaScript-->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://kit.fontawesome.com/3a0a83657c.js" crossorigin="anonymous"></script>
+    <script src="JavaScript/HomePage.js"></script>
+
+</head>
+
+<body>
+
+<!--
+Navigation Bar
+- container-fluid = let the margin become 窄
+- want change colour jiu delete bg-light and add background-color for style
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container-fluid">
+    <a href="Home.html"><img src="img/HeaderFooter/Finalize_Logo.svg" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="ProductList.html">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="FAQ.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="TrackingPage.html">My Order</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Login.html"><i class="fa-regular fa-user"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <!--Need to press free-->
+          <a href="Shopping%20Cart.html"><i class="fa-brands fa-opencart"></i></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!--Content-->
+    <div class="cover">
+        <div class="coverPic">
+            <img src="img/HomePage/cover.png" alt="cover picture" width="100%">
+        </div>
+        <div class="textbox1">
+            <div class="Text1">
+                Get Your Perfect </br> Packaging Today
+            </div>
+            <div class="subText1">
+                Design boxes, get instant quoting, and build your brand with customizable packaging products.
+            </div>
+            <a href="ProductList.html" class="button1">EXPLORE PRODUCTS</a>
+        </div>
+    </div>
+
+    <div class="home-box1 reveal" onclick="reveal()">
+        <p class="title2">Best Selling Products</p>
+
+        <div class="home-prod1">
+            <img src="img/ProductList/prod1.gif" width="320px">
+            <p class="prodText">Earlock Mailer</p>
+        </div>
+
+        <div class="home-prod2">
+            <img src="img/ProductList/prod5.gif" width="320px" />
+            <p class="prodText">Pop Mailer</p>
+        </div>
+
+        <div class="home-prod3">
+            <img src="img/ProductList/prod6.gif" width="320px" />
+            <p class="prodText">Quick To Pack</p>
+        </div>
+
+        <div class="home-prod4">
+            <img src="img/ProductList/prod2.gif" width="320px" />
+            <p class="prodText">One-Piece Folder</p>
+        </div>
+
+        <a href="ProductList.html" class="button3" >SHOP PRODUCTS</a>
+
+    </div>
+
+    <div class="box2 reveal" onclick="reveal()" >
+        <p class="title1">Our Services</p>
+        <section class="service">
+            <div class="content-box">
+                <div class="container">
+                    <div class="row service">
+                        <div class="col-md-4 service-col text-center">
+                            <div class="icon">
+                                <i class="bi bi-brush-fill"></i>
+                            </div>
+                            <h3>Self Customization</h3>
+                            <p>
+                                Customer could self design the box packaging that they want. Then,  communicate with us to
+                                improve customer satisfaction.
+                            </p>
+                        </div>
+                        <div class="col-md-4 service-col text-center">
+                            <div class="icon">
+                                <i class='fas fa-shipping-fast'></i>
+                            </div>
+                            <h3>Free Delivery</h3>
+                            <p>
+                                We have a free delivery service for all customer to avoid inconvenient for customer to
+                                pick up their ordered of box packaging
+                            </p>
+                        </div>
+                        <div class="col-md-4 service-col text-center">
+                            <div class="icon">
+                                <i class="bi bi-file-earmark-text-fill"></i>
+                            </div>
+                            <h3>Instant quote and enquiry</h3>
+                            <p>
+                                We will provide a quotation to the customer through email or Whatsapp, then the customer
+                                could ask us any question if they curious about the quotation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="FAQ.html" class="button2" style="vertical-align:middle"><span>More About Us</span></a>
+            </div>
+        </section>
+    </div>
+
+<!--Footer-->
+
+<footer class="mt-5 py-5">
+  <div class="row container mx-auto pt-5">
+    <div class="footer-one col-lg-3 col-md-6 col-12">
+    <img src="img/HeaderFooter/Finalize_Logo.svg" alt="logo">
+      <p class="pt-3"> This website is used to design about box packaging</p>
+    </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Page</h5>
+    <ul class="text-uppercase list-unstyled">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="ProductList.html">Products</a></li>
+      <li><a href="FAQ.html">About Us</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Contact Us</h5>
+    <div>
+      <h6 class="text-uppercase">Address</h6>
+      <a href="https://www.google.com/maps/place/Penang/@5.3539819,100.198192,11z/data=!3m1!4b1!4m5!3m4!1s0x304a9403095390dd:0x29c305a5f38f633f!8m2!3d5.4163935!4d100.3326786" target="_blank"><p>Pulau Pinang, Malaysia</p></a>
+    </div>
+    <div>
+      <h6 class="text-uppercase">Phone</h6>
+      <a href="tel:+60312001200"><p>03 - 1200 1200</p></a>
+    </div>
+    <div>
+      <h6 class="text-uppercase">E-mail</h6>
+      <a href="mailto:sales@boxexpert.com>"><p>sales@boxexpert.com</p></a>
+    </div>
+  </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Instagram</h5>
+    <div class="row">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod1.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod2.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod3.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod4.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod5.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod6.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod7.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod8.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod9.png" alt="instaphoto">
+    </div>
+  </div>
+</div>
+
+<div class="copyright mt-5">
+    <div class="row container mx-auto">
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <img src="img/HeaderFooter/Payment_Method.png" alt="Payment" width="200px">
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-12 text-nowrap">
+        <p>Box Expert Sdn Bhd © 2022. All Rights Reserved </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-12">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <script>
+        function homePage() {
+            var reveals = document.querySelectorAll(".homePage");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

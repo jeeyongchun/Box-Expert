@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+    <title>Food & Beverage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300&family=Mukta+Malar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../../Downloads/ProductList(final)/product.css">
+
+    <style>
+
+        .Image {
+            width: 320px;
+            height: 320px;
+            background-size: cover;
+            display: inline-block;
+            border-radius: 16px;
+            position: relative;
+        }
+
+            .Image div {
+                position: absolute;
+                color: #fff;
+                padding: 18px;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-color: rgba(0,0,0,0.5);
+                border-radius: 16px;
+                padding-top: 45%;
+                text-align: center;
+                font-size: 25px;
+                opacity: 0.85;
+                transition: .3s;
+            }
+    </style>
+</head>
+<body>
+    <div class="bg">
+
+        <div class="box1">
+            <p class="Shopitall">Shop it all</p>
+            <ul>
+                <li><a href="D:\Document\DIT\Assignment1\ProductList.html">All Products</a></li>
+                <li><a class="active" href="D:\Document\DIT\Assignment1\F&B.html">Food & Beverage</a></li>
+                <li><a href="D:\Document\DIT\Assignment1\ProductListPg2.html">Coming Soon</a></li>
+                <li><a href="#promo">Promotions</a></li>
+            </ul>
+        </div>
+
+        <div class="prod1">
+            <div class="onClickImage" style="background-image:url(prod8.gif)">
+                <div>
+                    Safely sealed and printed with food-safe ink. Food stays safely inside for a zero-contact delivery.
+                </div>
+            </div>
+            <p class="prodText">Secure Pizza Box</p>
+        </div>
+
+        <div class="prod2">
+            <div class="onClickImage" style="background-image:url(prod4.gif)">
+                <div>
+                    Protects bottles while making an impact�available in a 4 or 6-pack carrier.
+                </div>
+            </div>
+            <p class="prodText">Beer Carriers</p>
+        </div>
+
+        <div class="prod3">
+            <div class="onClickImage" style="background-image:url(prod1.gif)">
+                <div>
+                    Perfect for subscription boxes and sending goods in the mail.
+                </div>
+            </div>
+            <p class="prodText">Earlock Mailer</p>
+        </div>
+
+        <div class="prod4">
+            <div class="onClickImage" style="background-image:url(F&B1.gif)">
+                <div>
+                    Great for carry out or gift packaging. You have the option for 1, 2, 3, 4 or 6 bottles.
+                </div>
+            </div>
+            <p class="prodText">Vinopackaging Wine Carrier</p>
+        </div>
+
+        <div class="prod5">
+            <div class="onClickImage" style="background-image:url(F&B2.gif)">
+                <div>
+                    Includes 100% recycled pulp inserts to protect your wine bottles.
+                </div>
+            </div>
+            <p class="prodText">Wine Shipper & Mailer</p>
+        </div>
+
+        <div class="prod6">
+            <div class="onClickImage" style="background-image:url(prod5.gif)">
+                <div>
+                    Self-locking and reusable, converting seamlessly to counter displays with built-in headers and graphics.
+                </div>
+            </div>
+            <p class="prodText">Pop Mailer</p>
+        </div>
+
+        <div class="prod7">
+            <div class="onClickImage" style="background-image:url(food7.jpg)">
+                <div>
+                    Simple and straight forward take away cake sandwich. 100% made up of high quality of food grade paper.
+                </div>
+            </div>
+            <p class="prodText">Sandwich Box</p>
+        </div>
+
+        <div class="prod8">
+            <div class="Image" style="background-image:url(food2.jpg)">
+                <div>
+                    Coming Soon
+                </div>
+            </div>
+            <p class="prodText">Noodle Box</p>
+        </div>
+
+        <div class="prod9">
+            <div class="Image" style="background-image:url(food1.jpg)">
+                <div>
+                    Coming Soon
+                </div>
+            </div>
+            <p class="prodText">Beverage Packaging Box</p>
+        </div>
+
+        <div class="prod10">
+            <div class="Image" style="background-image:url(christmas2.jpg)">
+                <div>
+                    Coming Soon
+                </div>
+            </div>
+            <p class="prodText">Christmas Candy Box</p>
+        </div>
+
+        <div class="pagination">
+            <a href="D:\Document\DIT\Assignment1\ProductList.html">&laquo;</a>
+            <a href="D:\Document\DIT\Assignment1\ProductList.html">1</a>
+            <a class="active" href="D:\Document\DIT\Assignment1\F&B.html">2</a>
+            <a href="D:\Document\DIT\Assignment1\ProductListPg2.html">3</a>
+            <a href="#">4</a>
+            <a href="D:\Document\DIT\Assignment1\ProductListPg2.html">&raquo;</a>
+        </div>
+
+    </div>
+
+    <script>
+        var textOverImages = document.querySelectorAll(".onClickImage div");
+
+        for (var i = 0; i < textOverImages.length; i++) {
+            textOverImages[i].onclick = function () {
+                this.classList.toggle("show");
+            }
+        }
+    </script>
+</body>
+</html>

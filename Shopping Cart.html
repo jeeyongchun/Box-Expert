@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    BoxExpert | Shopping Cart
+  </title>
+
+  <!-- CSS only -->
+  <!-- Dont want delete -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+  rel="stylesheet"  type='text/css'>
+  <script src="https://kit.fontawesome.com/3a0a83657c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!--JavaScript-->
+  <script src="JavaScript/ShoppingCart.js"></script>
+
+
+</head>
+
+<body>
+
+<!--
+Navigation Bar
+- container-fluid = let the margin become 窄
+- want change colour jiu delete bg-light and add background-color for style
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container-fluid">
+    <a href="Home.html"><img src="img/HeaderFooter/Finalize_Logo.svg" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="ProductList.html">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="FAQ.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="TrackingPage.html">My Order</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Login.html"><i class="fa-regular fa-user"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <!--Need to press free-->
+          <a href="Shopping%20Cart.html"><i class="fa-brands fa-opencart"></i></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Content -->
+<!--
+pt-5 mt-5 = can put after class line 73
+-->
+<section id="blog-home" class="container" >
+  <h2 class="font-weight-bold pt-5"> <i class="fa-solid fa-cart-shopping" onclick="location.href='Shopping Cart.html'"></i> Shopping Cart </h2>
+  <hr class="hr-line">
+  <br>
+
+</section>
+
+<!--Table-->
+<section id="cart-container" class="container">
+  <table width="100%" id="cart-row">
+    <thead>
+      <tr>
+        <td>Product</td>
+        <td>Additional Info</td>
+        <td>Unit Price</td>
+        <td>Quantity</td>
+        <td>Total Price</td>
+        <td>Edit</td>
+      </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <!--Row 1-->
+      <!--Products-->
+      <td>
+        <br>
+        <img src="img/ShoppingCart/prod1.png" alt="" width="150">
+        <p>Earlock Mailer</p>
+      </td>
+
+      <!--Additional Info-->
+      <td>
+        <!-- Drop Down List-->
+        <select name="Size" id="cart_dropdown1" onclick="DropDownTotal()">
+          <option value="Small">Small</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="Large">Large</option>
+          <option value="Customize">Customize</option>
+        </select>
+      </td>
+
+      <!--Unit Price-->
+      <td>
+        <h5 id="cart_UPrice1">1 box / RM 5.00</h5>
+      </td>
+
+      <!--Quantity-->
+      <td>
+        <input class="w-25 pl-1" type="number" value="5" min="1" id="cart_UQuantity1" onclick="DropDownTotal()">
+      </td>
+
+      <!--Total Price-->
+      <td>
+        <h5 id="cart_TotalPrice1">RM 25.00</h5>
+      </td>
+
+      <!--Edit-->
+      <td>
+        <a onclick="deleteRow(this)"><i class="fa-regular fa-trash-can" ></i></a>
+      </td>
+
+    </tr>
+
+    <tr>
+      <!--Row 2-->
+      <!--Products-->
+      <td>
+          <br>
+          <img src="img/ShoppingCart/prod2.png" alt="" width="150">
+        <p>One-Piece Folder</p>
+      </td>
+
+      <!--Additional Info-->
+      <td>
+        <!-- Drop Down List-->
+        <select name="Design" id="cart_dropdown2" onclick="DropDownTotal()">
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="Customize" selected>Customize</option>
+        </select>
+      </td>
+
+      <!--Unit Price-->
+      <td>
+        <h5 id="cart_UPrice2"> 1 box / RM 10.00 </h5>
+      </td>
+
+      <!--Quantity-->
+      <td>
+        <input class="w-25 pl-1" type="number" value="1" min="1" id="cart_UQuantity2" onclick="DropDownTotal()">
+      </td>
+
+      <!--Total Price-->
+      <td>
+        <h5 id="cart_TotalPrice2">RM 10.00</h5>
+      </td>
+
+      <!--Edit-->
+      <td>
+        <a onclick="deleteRow(this)"><i class="fa-regular fa-trash-can"></i></a>
+      </td>
+
+    </tr>
+
+    <tr>
+      <!--Row 3-->
+      <!--Products-->
+      <td>
+        <br>
+        <img src="img/ShoppingCart/prod3.png" alt="" width="150">
+        <p>Tuck-Top Mailer</p>
+      </td>
+
+      <!--Additional Info-->
+      <td>
+        <!-- Drop Down List-->
+        <select name="Width" id="cart_dropdown3" onclick="DropDownTotal()">
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="Customize">Customize</option>
+        </select>
+      </td>
+
+      <!--Unit Price-->
+      <td>
+        <h5 id="cart_UPrice3"> 1 box / RM 3.00 </h5>
+      </td>
+
+      <!--Quantity-->
+      <td>
+        <input class="w-25 pl-1" type="number" value="1" min="1" id="cart_UQuantity3" onclick="DropDownTotal()">
+      </td>
+
+      <!--Total Price-->
+      <td>
+        <h5 id="cart_TotalPrice3">RM 3.00</h5>
+      </td>
+
+      <!--Edit-->
+      <td>
+        <a onclick="deleteRow(this)"><i class="fa-regular fa-trash-can"></i></a>
+      </td>
+
+    </tr>
+    </tbody>
+
+  </table>
+</section>
+
+<br>
+
+<section id="cart-bottom" class="container">
+  <div class="row">
+    <!--Apply Button-->
+    <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+      <div>
+        <h5>Discount Code</h5>
+        <p>Please enter your Discount Code to get up to 50% Discount.</p>
+        <input type="text" placeholder="Discount Code">
+        <button>APPLY DISCOUNT CODE</button>
+      </div>
+    </div>
+
+    <div class="total col-lg-6 col-md-6 col-12">
+      <div>
+
+        <h5>Cart Total</h5>
+        <div class="d-flex justify-content-between">
+          <h6>Subtotal</h6>
+          <p id="cart-subtotal">RM 38.00</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <h6>Shipping Fee</h6>
+          <p>RM 4.90</p>
+        </div>
+        <hr class="second-hr">
+        <div class="d-flex justify-content-between">
+          <h6>Grand Total</h6>
+          <p id="cart-grandTotal" onchange="DropDownTotal()">RM 42.90</p>
+        </div>
+
+        <!--If want to navigate to another page just add onclick-->
+        <button class="ml-auto" onclick="location.href='CheckoutPage.html'" >CHECKOUT</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Footer-->
+
+<footer class="mt-5 py-5">
+  <div class="row container mx-auto pt-5">
+    <div class="footer-one col-lg-3 col-md-6 col-12">
+    <img src="img/HeaderFooter/Finalize_Logo.svg" alt="logo">
+      <p class="pt-3"> This website is used to design about box packaging</p>
+    </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Page</h5>
+    <ul class="text-uppercase list-unstyled">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="ProductList.html">Products</a></li>
+      <li><a href="FAQ.html">About Us</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Contact Us</h5>
+    <div>
+      <h6 class="text-uppercase">Address</h6>
+      <a href="https://www.google.com/maps/place/Penang/@5.3539819,100.198192,11z/data=!3m1!4b1!4m5!3m4!1s0x304a9403095390dd:0x29c305a5f38f633f!8m2!3d5.4163935!4d100.3326786" target="_blank"><p>Pulau Pinang, Malaysia</p></a>
+    </div>
+    <div>
+      <h6 class="text-uppercase">Phone</h6>
+      <a href="tel:+60312001200"><p>03 - 1200 1200</p></a>
+    </div>
+    <div>
+      <h6 class="text-uppercase">E-mail</h6>
+      <a href="mailto:sales@boxexpert.com>"><p>sales@boxexpert.com</p></a>
+    </div>
+  </div>
+
+  <div class="footer-one col-lg-3 col-md-6 col-12">
+    <h5 class="pb-2">Instagram</h5>
+    <div class="row">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod1.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod2.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod3.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod4.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod5.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod6.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod7.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod8.png" alt="instaphoto">
+      <img class="img-fluid w-25 h-100 m-2" src="img/HeaderFooter/prod9.png" alt="instaphoto">
+    </div>
+  </div>
+</div>
+
+<div class="copyright mt-5">
+    <div class="row container mx-auto">
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <img src="img/HeaderFooter/Payment_Method.png" alt="Payment" width="200px">
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-12 text-nowrap">
+        <p>Box Expert Sdn Bhd © 2022. All Rights Reserved </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-12">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+</body>
+</html>
